@@ -36,7 +36,7 @@ function onGalleryItemsClick(evt) {
 
 function onModal(evt) {
   const instance = basicLightbox.create(
-    `<img src="${evt.target.dtaset.source}"/>`,
+    `<img src="${evt.target.dataset.source}"/>`,
     {
       onShow: (instance) => {
         galleryContainer.addEventListener("keydown", onEscKeyPress);
@@ -45,9 +45,9 @@ function onModal(evt) {
         galleryContainer.removeEventListener("keydown", onEscKeyPress);
       },
     },
-    instance.show()
+    
   );
-  
+  instance.show()
 
   function onEscKeyPress(evt) {
     if (evt.code ==="Escape") {
