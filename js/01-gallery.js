@@ -39,10 +39,10 @@ function onModal(evt) {
     `<img src="${evt.target.dataset.source}"/>`,
     {
       onShow: (instance) => {
-        galleryContainer.addEventListener("keydown", onEscKeyPress);
+        document.addEventListener("keydown", onEscKeyPress);
       },
       onClose: (instance) => {
-        galleryContainer.removeEventListener("keydown", onEscKeyPress);
+        document.removeEventListener("keydown", onEscKeyPress);
       },
     },
     
